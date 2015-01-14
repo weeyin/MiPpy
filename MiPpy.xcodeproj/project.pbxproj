@@ -14,6 +14,8 @@
 		40A896A21A61FC1100F6813C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40A896A11A61FC1100F6813C /* Images.xcassets */; };
 		40A896A51A61FC1100F6813C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40A896A31A61FC1100F6813C /* LaunchScreen.xib */; };
 		40A896B11A61FC1100F6813C /* MiPpyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A896B01A61FC1100F6813C /* MiPpyTests.m */; };
+		40A896BB1A61FCC300F6813C /* WowWeeMiPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A896BA1A61FCC300F6813C /* WowWeeMiPSDK.framework */; };
+		40A896BD1A61FD0F00F6813C /* WowWeeMiPSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 40A896BA1A61FCC300F6813C /* WowWeeMiPSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,19 @@
 			remoteInfo = MiPpy;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40A896BC1A61FCEE00F6813C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40A896BD1A61FD0F00F6813C /* WowWeeMiPSDK.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		40A896911A61FC1100F6813C /* MiPpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiPpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,7 @@
 		40A896AA1A61FC1100F6813C /* MiPpyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiPpyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A896AF1A61FC1100F6813C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40A896B01A61FC1100F6813C /* MiPpyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiPpyTests.m; sourceTree = "<group>"; };
+		40A896BA1A61FCC300F6813C /* WowWeeMiPSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WowWeeMiPSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A896BB1A61FCC300F6813C /* WowWeeMiPSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 		40A896881A61FC1100F6813C = {
 			isa = PBXGroup;
 			children = (
+				40A896BA1A61FCC300F6813C /* WowWeeMiPSDK.framework */,
 				40A896931A61FC1100F6813C /* MiPpy */,
 				40A896AD1A61FC1100F6813C /* MiPpyTests */,
 				40A896921A61FC1100F6813C /* Products */,
@@ -129,6 +147,7 @@
 				40A8968D1A61FC1100F6813C /* Sources */,
 				40A8968E1A61FC1100F6813C /* Frameworks */,
 				40A8968F1A61FC1100F6813C /* Resources */,
+				40A896BC1A61FCEE00F6813C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -343,6 +362,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MiPpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +376,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = MiPpy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
